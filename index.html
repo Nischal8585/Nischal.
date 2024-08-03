@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nischal portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script
+      src="https://kit.fontawesome.com/c6266cbdf4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .links {
+        text-align: center;
+        margin-left: 13%;
+        margin-bottom: 3%;
+        }
+        .links a {
+        font-size: 50px;
+        color: #fff;
+        margin-right: 15%;
+        }
+        .links a:hover {
+            color:rgb(151, 151, 247);
+        }
+        body{
+            background-color:rgb(0, 0,33) ;
+            color: aliceblue;
+            font-family:'montserrat', sans-serif; 
+            font-size: larger;
+        } 
+        nav{
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+            height: 80px;
+            background-color: rgb(18,18,62);
+            position: fixed;
+            width: 100%;
+            top:0;
+            z-index:1000;
+        }
+        nav ul{
+            display:flex ;
+            justify-content: center;
+
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+
+        }
+        nav ul li a:hover{
+            color:rgb(151, 151, 247);
+            font-size: 1.0rem;
+            border: 0;
+        }
+        main{
+            padding-top: 100px;
+        }
+        main hr {
+             background: #9c97f1;
+             height: 1.2px;
+             margin: 50px 70px;
+            }
+        
+        .left{
+            font-size: 1.6rem;
+
+        }
+        .right{
+            font-size: 1.1rem;
+        }
+        .firstsection{
+            display:flex;
+            justify-content:space-around;
+            align-items:center ;
+            margin:145px 0;
+           
+
+        }
+        .firstsection > div{
+        width: 30%;
+        }
+        .leftsection{
+            font-size: 3rem;
+         
+        }
+        .leftsection .button{
+            padding: 50px 0;
+
+        }
+        .leftsection .btn{
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 1.5px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .leftsection .btn:hover{
+            background-color:black;
+        }
+       
+        
+        .rightsection img{
+            width: 81%;
+            margin: 50px 0;
+        }
+        .purple{
+            color: rgb(140, 140, 244);
+        }
+        .text-gray{
+            color: grey;
+            font-size:larger;
+
+        }
+        #element{
+            color: rgb(140, 140, 244);
+        }
+        .aboutcontent{
+            display: flex;
+            justify-content:space-around;
+            margin: 100px 0;
+            height: 40vh;
+        }
+        * h1{
+            text-align: center;
+            margin:50px 0 ;
+        }
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 10%;
+            object-fit: cover;
+            display: block;
+            margin-left: 60%;
+            box-shadow: 0 8px 16px rgba(79, 79, 79, 0.8);
+
+          
+        }
+        .about-text {
+    max-width: 700px;
+    text-align: left; 
+        }
+        .profile-heading {
+            font-size: 35px;
+            color: rgb(113, 113, 251);
+            margin-top: -30px;
+            
+        
+        }
+        .secondrightsection .button{
+            padding: 40px 0;
+        }
+        .secondrightsection .btn{
+            padding: 8px;
+            background: #1e2167;
+            color: white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .secondrightsection .btn:hover{
+            background-color:black;
+        }
+    
+        .thirdsection{
+            max-width: 80vw;
+            margin: auto;
+            height: 100vh;
+        }
+        .thirdsection .box{
+            margin: 99px 0;
+         height: 2px;
+         width: 80vw;
+        
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+        }
+        .thirdsection .vertical{
+            height: 93px;
+            margin:0 100px ;
+
+        }
+        .thirdsection .vertical-text{ 
+           margin-top: 5px;
+           margin-left: 12px;
+           font-size:1.8rem;
+           color: rgb(130, 130, 254);
+           font-weight: bold;
+           justify-content: space-around;
+        }
+        .thirdsection .box1{
+         margin: 251px 0;
+         height: 2px;
+         width: 80vw;
+         
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+        }
+        .vertical img, .vertical1 img {
+            width: 100px;
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+         }
+        .vertical img:hover, .vertical1 img:hover {
+            transform: scale(1.3);
+            
+        }
+
+
+
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+        .education-table thead {
+            background: linear-gradient(90deg, #0a192f, #112240);
+            color: #64ffda;
+        }
+        .education-table th, .education-table td {
+            padding: 8px 10px;
+            text-align: left;
+            border-bottom: 1px solid #233554;
+        }
+        .education-table th {
+            font-weight: 800;
+        }
+        .education-table tbody tr:nth-child(even) {
+            background-color: #1a263b;
+        }
+        .education-table tbody tr:nth-child(odd) {
+            background-color: #112240;
+        }
+        .education-table tbody tr:hover {
+            background-color: #1c3a63;
+            cursor: pointer;
+        }
+        .education-table tbody tr td:last-child {
+            text-align: center;
+        }
+        .education-table tbody tr td {
+            position: relative;
+        }
+        .education-table tbody tr:hover td::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            border-radius: 0 5px 5px 0;
+        }
+
+   
+        
+
+        footer{
+            background-color: rgb(17, 17, 59);
+
+        }
+        .footer{
+            display:flex;
+            
+        }
+        .footer-first{
+            padding-top:20px;
+            padding-left:20px;
+        }
+        .footer-second{
+            text-align:center;
+            padding-bottom: 40px;
+           color: grey;
+        }
+        .footer-logo {
+            width: 200px; 
+            height: auto; 
+            padding-top: 5px;
+        }  
+
+        .teams{
+            height: 30vh;
+            padding: 10%;
+        }
+        .teams .carousel .card{
+            background: #00203FFF;
+            border-radius: 6px;
+            padding: 25px 35px;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.1s ease;
+        }
+        .teams .carousel .card:hover{
+            background: #ADEFD1FF;
+            color: #00203FFF;
+        }
+        .teams .carousel .card .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.1 ease;
+        }
+        .teams .carousel .card:hover .box{
+            transform: scale(1.05);
+        }
+        .teams .carousel .card .text{
+            font-size: 25px;
+            font-weight: 500;
+            margin: 10px 0 7px 0;
+        }
+        .teams .carousel .card img{
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #ADEFD1FF;
+            transition: all 0.3s ease;
+        }
+        .teams .carousel .card:hover img{
+            border-color: #fff;
+        }
+        .owl-dots{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .owl-dot{
+            height: 13px;
+            width: 13px;
+            margin: 0 5px;
+            outline: none!important;
+            border-radius: 50%;
+            border: 2px solid #ADEFD1FF!important;
+            transition: all 0.3s ease;
+        }
+        .owl-dot.active{
+            width: 35px;
+            border-radius: 14px;
+        }
+        .owl-dot.active,
+        .owl-dot:hover{
+            background: #ADEFD1FF!important;
+        }
+        
+        
+        .background {
+        
+          display: flex;
+          font-weight: 700;
+        }
+        
+        .container {
+          flex: 0 1 1000px;
+          margin: auto;
+          padding: 40px;
+          margin-bottom: 40px;
+        }
+        
+        .screen {
+          position: relative;
+          background: #3e3e3e;
+          border-radius: 25px;
+        }
+        
+        .screen:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 20px;
+          right: 20px;
+          bottom: 0;
+          border-radius: 15px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+          z-index: -1;
+        }
+        
+        .screen-header {
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          background: #4d4d4f;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        
+        .screen-header-left {
+          margin-right: auto;
+        }
+        
+        .screen-header-button {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          margin-right: 3px;
+          border-radius: 8px;
+          background: white;
+        }
+        
+        .screen-header-button.close {
+          background: #ed1c6f;
+        }
+        
+        .screen-header-button.maximize {
+          background: #e8e925;
+        }
+        
+        .screen-header-button.minimize {
+          background: #74c54f;
+        }
+        
+        .screen-header-right {
+          display: flex;
+        }
+        
+        .screen-header-ellipsis {
+          width: 3px;
+          height: 3px;
+          margin-left: 2px;
+          border-radius: 8px;
+          background: #999;
+        }
+        
+        .screen-body {
+          display: flex;
+        }
+        
+        .screen-body-item {
+          flex: 1;
+          padding: 50px;
+        }
+        
+        .screen-body-item.left {
+          display: flex;
+          flex-direction: column;
+        }
+        
+        
+        
+        
+        .app-title {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          color: rgb(113, 113, 251);
+          font-size: 26px;
+          letter-spacing: 1.4px;
+        }
+        
+        .app-title:after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          width: 25px;
+          height: 4px;
+          background: rgb(113, 113, 251);
+        }
+        
+        .app-contact {
+          margin-top: auto;
+          font-size: 12px;
+          color: #888;
+          letter-spacing: 1.4px;
+        }
+        
+        .app-form-group {
+          margin-bottom: 15px;
+        }
+        
+        .app-form-group.message {
+          margin-top: 40px;
+        }
+        
+        .app-form-group.buttons {
+          margin-bottom: 0;
+          text-align: right;
+          font-weight: 700; 
+        }
+        
+        .app-form-control {
+          width: 100%;
+          padding: 15px 0;
+          background: none;
+          border: none;
+          border-bottom: 1px solid #666;
+          color: #ddd;
+          font-size: 14px;
+          outline: none;
+          transition: border-color .2s;
+          font-weight: 700;
+          letter-spacing: 1.4px;
+        }
+        
+        .app-form-control::placeholder {
+          color: #666;
+        }
+        
+        .app-form-control:focus {
+          border-bottom-color: #ddd;
+        }
+        
+        .app-form-button {
+          background: none;
+          border: none;
+          color: rgb(113, 113, 251);
+          font-size: 15px;
+          cursor: pointer;
+          outline: none;
+          letter-spacing: 1.4px;
+          padding-right: 14px;
+        }
+        
+        .app-form-button:hover {
+          color: black;
+        }
+        
+        .credits {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          color: #ffa4bd;
+          font-size: 16px;
+        }
+        
+        .credits-link {
+          display: flex;
+          align-items: center;
+          color: #fff;
+          text-decoration: none;
+        }
+        
+        .dribbble {
+          width: 20px;
+          height: 20px;
+          margin: 0 5px;
+        }
+ </style>
+
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><b>Nischal.</b></div>
+            <div class="right">
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#teams">Projects</a></li>
+            <li><a href="#contactme">Contact Me</a></li>
+            </ul></div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My Name <span class="purple">Nischal</span>
+                <div>I am a passionate </div>
+                <span id="element"></span>
+                <div class="button">
+                    <a href="NISCHAL-KUNCHAM-Resume.pdf" target="_blank" class="button btn">Download Resume</a>
+                </div>
+            </div>
+            <div class="rightsection">
+            <img src="icons/rightpic1.png">
+            </div>
+        </section>
+        <hr>
+
+        <section class="secondsection" id="aboutme">
+            <h1>About me</h1>
+          <div class="aboutcontent">
+            <div class="secondleftsection">
+                              <img src="nischalpic.JPG" alt="nischal's image" class="profile-image">
+                            </div>
+                            <div class="secondrightsection">
+                                <br>
+                                <br>
+                                <h2 class="profile-heading"><b>I'm Nischal Kuncham</b></h2><p class="about-text"><i>As a versatile professional with a strong foundation in C,C++, Python
+                                 I bring a diverse skill set to any technical role.
+                                 My expertise spans full stack development, including front-end technologies (HTML, CSS, JavaScript) and back-end
+                                 systems (PHP, MySQL). Additionally,leveraging ReactJS, Node.js, MongoDB, and Express.js. 
+                                 Known for my collaborative nature and teamwork skills, I consistently contribute to successful project outcomes and innovative solutions,
+                                  making me a valuable asset to any organization.</i></p>
+                                <div class="button">
+                                    <a href="https://www.linkedin.com/in/nischal-k/" target="_blank" class="button btn">Linkedln</a>
+                                </div>
+                            </div>
+          </div>      
+        </section>
+        <hr>
+
+
+        <section class="thirdsection" id="skills">
+            <h1>Skills</h1>
+            <span class="text-gray">Languages known </span>
+            <div class="box">
+                <div class="vertical">
+                    <img src="icons/htmllogo.png" alt="" class="image-top">
+                <div class="vertical-text">
+                    HTML
+                </div> </div>
+                <div class="vertical">
+                    <img src="icons/cssicon.png" alt="" class="">
+                <div class="vertical-text">
+                    CSS
+                </div> </div>
+                <div class="vertical">
+                    <img src="icons/jsicon.png" alt="" class=""> 
+                <div class="vertical-text">
+                    JS
+                </div></div>
+                <div class="vertical"> 
+                    <img src="icons/reacticon.png" alt="" class="">
+                    <div class="vertical-text">
+                        React
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="icons/pythonicon.png" alt="" class="">
+                    <div class="vertical-text">
+                        Python
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="box1">
+                <div class="vertical1">
+                    <img src="icons/icons8-nodejs-96.png" alt="" class="">
+                    <div class="vertical-text">
+                        Nodejs
+                    </div>
+                </div>
+                <div class="vertical1">
+                    <img src="icons/icons8-mysql-logo-100.png" alt="" class="">
+                    <div class="vertical-text">
+                        MYSQL
+                    </div>
+                </div>
+                <div class="vertical1">
+                    <img src="icons/icons8-php-100.png" alt="" class="">
+                  <div class="vertical-text">
+                    php
+                  </div>
+
+                </div>
+                <div class="vertical1">
+                    <img src="icons/mongodb.png" alt="" class="">
+                    <div class="vertical-text">
+                        MongoDB
+                    </div>
+                </div>
+            </div>
+            <div class="edubox">
+                <h1>Education Details</h1>
+                <table class="education-table">
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bachelor of Science in Computer Science</td>
+                            <td>University of Example</td>
+                            <td>2020</td>
+                         
+                        </tr>
+                        <tr>
+                            <td>Master of Science in Data Science</td>
+                            <td>Institute of Technology</td>
+                            <td>2022</td>
+                          
+                        </tr>
+                        <tr>
+                            <td>vfbjkbeiurgivjbkde</td>
+                            <td>jckbfkv</td>
+                            <td>2344</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <hr>
+
+
+        <section class="teams" id="teams">
+            <div class="max-width">
+                <h2 style="text-align: center; margin-top: -10%;margin-bottom: 5%;" class="title">My Projects</h2>
+                <div class="carousel owl-carousel">
+                    <div class="card">
+                        <div class="box">
+                            <img src="contact.jpeg" alt="">
+                            <div class="text">Contact Management System</div>
+                            <p>A basic Contact Management system made using HTML, CSS along with the bootstrap framework and php.<br><br></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="food.jpeg" alt="">                          
+                            <div class="text">Food-Ordering WebApp</div>
+                            <p>This is just a basic look-a-like food ordering responsive website created using HTML, CSS and Bootstrap framework<br><br></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="flat.jpeg" alt="">
+                            <div class="text">Flat-Booking WebApp </div>
+                            <p>This is a basic interactive Flat details displaying website made using components of HTML and CSS along with the features of Bootstrap Framework</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="https://www.esikkimtourism.in/wp-content/uploads/2019/04/3rd-image.jpg" alt="">
+                            <div class="text">Tourism</div>
+                            <p>This is a basic interactive tourism details displaying website made using components of HTML and CSS along with the features of Bootstrap Framework</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+                <section class="contact" id="contactme">
+                    <h1>Contact Me</h1>
+            <div class="background">
+                <div class="container">
+                  <div class="screen">
+                    <div class="screen-header">
+                      <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                      </div>
+                      <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                      </div>
+                    </div>
+                    <div class="screen-body">
+                      <div class="screen-body-item left">
+                        <div class="app-title">
+                          <span>CONTACT</span>
+                          <span>US</span>
+                        </div>
+                        <div class="app-contact">CONTACT INFO :+91 9912366224</div>
+                      </div>
+                      <div class="screen-body-item">
+                        <div class="app-form">
+                          <div class="app-form-group">
+                            <input class="app-form-control" placeholder="NAME">
+                          </div>
+                          <div class="app-form-group">
+                            <input class="app-form-control" placeholder="EMAIL">
+                          </div>
+                          <div class="app-form-group">
+                            <input class="app-form-control" placeholder="CONTACT NO">
+                          </div>
+                          <div class="app-form-group message">
+                            <input class="app-form-control" placeholder="MESSAGE">
+                          </div>
+                          <div class="app-form-group buttons">
+                            <button class="app-form-button">CANCEL</button>
+                            <button class="app-form-button">SEND</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="links">
+                <a
+                  href="https://www.linkedin.com/in/nischal-k/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="https://x.com/NischalK14" target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://github.com/Nischal8585t" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="https://www.instagram.com/nischal_8585/" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+              
+        </section>   
+    </main>
+
+
+    <footer>
+        <div class="flex">
+            <div class="footer-first">
+                <img src="nischal-high-resolution-logo-transparent 2.png" class="footer-logo" >
+            </div>
+            <div class="footer-second">
+                &#169; www.Nischal's portfolio.com| All rights reserved
+            </div>
+        </div>
+        
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <!-- Element to contain animated typing -->
+  <span id="element"></span>
+
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+   <!-- Setup and start animation! -->
+   <script>
+    var typed = new Typed('#element', {
+      strings: ['student','Web Devoleper.'],
+      typeSpeed: 50,
+    });
+    $('.carousel').owlCarousel({
+      margin: 20,
+      loop: true,
+      autoplay: true,
+      autoplayTimeOut: 2000,
+      autoplayHoverPause: true,
+      responsive: {
+          0:{
+              items: 1,
+              nav: false
+          },
+          600:{
+              items: 2,
+              nav: false
+          },
+          1000:{
+              items: 3,
+              nav: false
+          }
+      }
+  });
+  </script>
+
+</body>
+</html>
